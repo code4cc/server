@@ -25,7 +25,7 @@ wget -O /root/.aria2/aria2.conf https://raw.githubusercontent.com/code4cc/server
 安装caddy
 wget https://raw.githubusercontent.com/code4cc/server/main/caddy_install_modify.sh &&chmod +x caddy_install_modify.sh &&./caddy_install_modify.sh
 
-wget -O /usr/local/caddy/Caddyfile https://raw.githubusercontent.com/code4cc/server/main/Caddyfile &&/etc/init.d/caddy stop
+wget -O /usr/local/caddy/Caddyfile https://raw.githubusercontent.com/code4cc/server/main/Caddyfile
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 安装filebrowser
