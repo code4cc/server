@@ -1,0 +1,62 @@
+aZAmYDhf8kMagabO
+
+passwd
+eV%Y$n5C8!srNhoifPau
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+安装必备软件
+apt update &&apt dist-upgrade -y &&apt install curl git python socat supervisor vim wget zip -y &&apt autoremove -y
+
+mkdir script &&cd sc*/ &&wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" &&chmod +x tcp.sh &&./tcp.sh
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+安装ssl证书
+curl https://get.acme.sh | sh -s email=chenjiepeng4net@gmail.com &&wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
+
+bash acme.sh --issue --alpn -d tr0jan.xyz -d ariang.tr0jan.xyz -d download.tr0jan.xyz
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+安装aria2
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/aria2.sh &&chmod +x aria2.sh &&./aria2.sh
+
+wget -O /root/.aria2/aria2.conf https://raw.githubusercontent.com/code4cc/server/main/aria2.conf &&mkdir /root/Ariang &&mkdir /root/Ariang/download &&./aria2.sh
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+安装caddy
+wget https://raw.githubusercontent.com/code4cc/server/main/caddy_install_(modify).sh &&chmod +x caddy_install.sh &&./caddy_install_(modify).sh
+
+wget -O /usr/local/caddy/Caddyfile https://raw.githubusercontent.com/code4cc/server/main/Caddyfile &&/etc/init.d/caddy stop
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+安装filebrowser
+curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+
+cd /root/Ariang &&filebrowser config init &&filebrowser -d filebrowser.db config set --baseurl=/root/Ariang/download --locale=zh-cn
+
+filebrowser -d filebrowser.db users add cc cc --perm.admin --scope=download
+
+wget -O /etc/supervisor/conf.d/supervisor.conf https://raw.githubusercontent.com/code4cc/server/main/supervisor.conf &&supervisorctl update
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+安装ariang
+cd &&wget https://github.com/mayswind/AriaNg-DailyBuild/archive/master.zip &&unzip m*zip &&rm m*zip && mv AriaNg-DailyBuild-master/* Ariang/ &&rm -r AriaNg*/
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+安装SSR并设置开机启动
+cd &&git clone -b akkariiin/master https://github.com/code4cc/Akkariiin-shadowsocksr.git &&cd Ak*/ &&bash initcfg.sh &&vim userapiconfig.py
+
+python mujson_mgr.py -a -u a -p 32859 -k jTQLLHs8k0oMDM6Wdn -m aes-128-cfb -O auth_chain_a  -o tls1.2_ticket_fastauth
+
+echo '[Unit]
+Description=SSR
+[Service]
+ExecStart=/root/Akkariiin-shadowsocksr/run.sh
+[Install]
+WantedBy=multi-user.target' > /etc/systemd/system/SSR.service &&systemctl enable SSR.service
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+安装V2ray
+cd &&bash <(curl -sL https://s.hijk.art/v2ray.sh)
+安装V2ray-VLESS+WS+TLS(可过cdn)
+tr0jan.icu
+ 
