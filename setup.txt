@@ -1,7 +1,4 @@
-aZAmYDhf8kMagabO
-
-passwd
-eV%Y$n5C8!srNhoifPau
+Nh7-q3OIIYor.rp]I-W^pC:1YYpdk_
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 安装必备软件
@@ -13,7 +10,7 @@ mkdir script &&cd sc*/ &&wget -N --no-check-certificate "https://raw.githubuserc
 安装ssl证书
 curl https://get.acme.sh | sh -s email=chenjiepeng4net@gmail.com &&wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 
-bash acme.sh --issue --alpn -d tr0jan.xyz -d ariang.tr0jan.xyz -d download.tr0jan.xyz
+bash acme.sh --issue --alpn -d tr0jan.tk -d ariang.tr0jan.tk -d download.tr0jan.tk
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 安装aria2
