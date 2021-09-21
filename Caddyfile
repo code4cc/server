@@ -1,18 +1,18 @@
-https://tr0jan.xyz {
+https://tr0jan.tk {
   gzip
   basicauth / cc admin
-  tls /root/.acme.sh/tr0jan.xyz/tr0jan.xyz.cer /root/.acme.sh/tr0jan.xyz/tr0jan.xyz.key
+  tls /root/.acme.sh/tr0jan.tk/tr0jan.tk.cer /root/.acme.sh/tr0jan.tk/tr0jan.tk.key
   proxy / https://www.bingimg.cn/
 }
-https://ariang.tr0jan.xyz {
+https://ariang.tr0jan.tk {
   root /root/Ariang
   gzip
   timeouts none
-  tls /root/.acme.sh/tr0jan.xyz/tr0jan.xyz.cer /root/.acme.sh/tr0jan.xyz/tr0jan.xyz.key
+  tls /root/.acme.sh/tr0jan.tk/tr0jan.tk.cer /root/.acme.sh/tr0jan.tk/tr0jan.tk.key
 }
-https://download.tr0jan.xyz {
+https://download.tr0jan.tk {
   gzip
   timeouts none
-  tls /root/.acme.sh/tr0jan.xyz/tr0jan.xyz.cer /root/.acme.sh/tr0jan.xyz/tr0jan.xyz.key
+  tls /root/.acme.sh/tr0jan.tk/tr0jan.tk.cer /root/.acme.sh/tr0jan.tk/tr0jan.tk.key
   proxy / localhost:8080
 }
