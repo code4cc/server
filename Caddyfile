@@ -1,18 +1,18 @@
-https://tr0jan.tk {
+https://cccloud.gq {
   gzip
   basicauth / cc admin
-  tls /root/.acme.sh/tr0jan.tk/tr0jan.tk.cer /root/.acme.sh/tr0jan.tk/tr0jan.tk.key
+  tls /root/.acme.sh/cccloud.gq/cccloud.gq.cer /root/.acme.sh/cccloud.gq/cccloud.gq.key
   proxy / https://www.bingimg.cn/
 }
-https://ariang.tr0jan.tk {
+https://ariang.cccloud.gq {
   root /root/Ariang
   gzip
   timeouts none
-  tls /root/.acme.sh/tr0jan.tk/tr0jan.tk.cer /root/.acme.sh/tr0jan.tk/tr0jan.tk.key
+  tls /root/.acme.sh/cccloud.gq/cccloud.gq.cer /root/.acme.sh/cccloud.gq/cccloud.gq.key
 }
-https://download.tr0jan.tk {
+https://download.cccloud.gq {
   gzip
   timeouts none
-  tls /root/.acme.sh/tr0jan.tk/tr0jan.tk.cer /root/.acme.sh/tr0jan.tk/tr0jan.tk.key
+  tls /root/.acme.sh/cccloud.gq/cccloud.gq.cer /root/.acme.sh/cccloud.gq/cccloud.gq.key
   proxy / localhost:8080
 }
